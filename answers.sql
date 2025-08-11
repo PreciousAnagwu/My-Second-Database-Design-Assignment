@@ -7,9 +7,9 @@ FROM payments;
 
 -- (2️) Get orders that are currently 'In Process'
 -- Filter by status = 'In Process' and sort newest orders first
-SELECT orderDate, requiredDate, `status` --I used `` in status because MySQL recognizes status as a reserved keyword
+SELECT orderDate, requiredDate, status 
 FROM orders
-WHERE status = 'In Process' --I used `` in status because MySQL recognizes status as a reserved keyword
+WHERE status = 'In Process'
 ORDER BY orderDate DESC;
 
 -- (3) List Sales Representatives
