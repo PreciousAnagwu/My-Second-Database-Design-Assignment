@@ -9,7 +9,7 @@ FROM payments;
 -- Filter by status = 'In Process' and sort newest orders first
 SELECT orderDate, requiredDate, `status` --I used `` in status because MySQL recognizes status as a reserved keyword
 FROM orders
-WHERE `status` = 'In Process' --I used `` in status because MySQL recognizes status as a reserved keyword
+WHERE status = 'In Process' --I used `` in status because MySQL recognizes status as a reserved keyword
 ORDER BY orderDate DESC;
 
 -- (3) List Sales Representatives
